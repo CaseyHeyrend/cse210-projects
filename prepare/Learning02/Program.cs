@@ -18,6 +18,7 @@ class Program
         job2._company = "Apple";
         job2._startYear = 2022;
         job2._endYear = 2023;
+        job2.Display();
 
         //Resume
         Resume myResume = new Resume();
