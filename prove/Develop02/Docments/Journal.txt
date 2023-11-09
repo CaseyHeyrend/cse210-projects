@@ -1,0 +1,26 @@
+Class Program:
+Class Prompts
+
+Class Journal:
+
+Varibles:
+_List<Entries>
+
+Methods:
+Display() :void
+AddEntry(newEntry : Entry):void
+Load(file : string)
+Save(file : string)
+
+
+ Class Entry:
+ _date : string
+ _entry : string
+ _prompt : string
+
+ Methods:
+ Display()
+
+
+ 
+ 
