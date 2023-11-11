@@ -3,7 +3,7 @@ using System;
 
 public class JournalEntry
 {
-    public string _date= "";
+    public string _date = "";
     public string _journalEntry = "";
     public string _journalPrompt = "";
     

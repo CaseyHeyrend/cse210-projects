@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Security.Cryptography;
 
 // This is the Class Prompts
 class JournalPrompt{
@@ -37,11 +38,91 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Prompts
-        
+        int[] vaildNums = {1, 2, 3, 4, 5};
+        int effect = 0;
         Console.WriteLine("Welcome to Journal App");
+        Journal journal = new Journal();
+        JournalPrompt cue = new JournalPrompt();
         //Writing a Journal Entry
-        
+        while (effect != 5)
+        {
+            effect = Options();
+            switch (effect)
+            {
+                //Writing a Journal Entry
+                case 1:
+                    string dateNow = GetDate();
+                    string prompt = cue.GetPrompt();
 
+                    JournalEntry entry = new JournalEntry();
+                    entry._date = dateNow;
+                    entry._journalPrompt = prompt;
+
+                    Console.Write($"{prompt}");
+                    Console.Write($">>>");
+                    string userEntry = Console.ReadLine();
+                    entry._journalEntry = userEntry;
+
+                    journal._journal.Add(entry);
+                    break;
+                case 2:
+                    journal.Display();
+                    break;
+                case 3:
+                    journal.LoadJournalFile();
+                    break;
+                case 4:
+                    journal.CreateJournalFile();
+                    break;
+                case 5:
+                    Console.WriteLine("Thank you for usisg the Journal App!");
+                    break;
+                default:
+                    Console.WriteLine($"So Sorry that isn't an option. Try again.");
+                    break;
+            }
+
+        }
+        
+    }
+    static int Options()
+    {
+        string options = @"
+        Please select one of the following options:
+        1.Write
+        2.Display
+        3.Load
+        4.Save
+        5. Quit
+        So What would you like to do? ";
+
+        Console.Write(options);
+        string userInput = Console.ReadLine();
+        int effect = 0;
+
+        try 
+        {
+            effect = int.Parse(userInput);
+        }
+        catch(FormatException)
+        {
+            effect = 0;
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine($"Unexpexted error: {exception.Message}");
+        }
+        return effect;
+    }
+    static string GetDate()
+    {
+        DateTime now = DateTime.Now;
+        string currentDate = now.ToString("F");
+        return currentDate;
+    }
+    static void AddJournalEntry()
+    {
+        string MyJournalFile = "MyJournal.txt";
+        File.AppendAllText(MyJournalFile, "");
     }
 }
