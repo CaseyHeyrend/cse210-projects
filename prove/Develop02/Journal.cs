@@ -22,7 +22,7 @@ public class Journal
         }
         Console.WriteLine("End");
     }
-    public void CreateJournalFile()
+    public void CreateJournal()
     {
         Console.Write("What is your file name? ");
         string userInput = Console.ReadLine();
@@ -64,7 +64,7 @@ public class Journal
             }
         }
     }
-    public void LoadJournalFile()
+    public void LoadJournal()
     {
         Console.Write("What is the file name? ");
         string userInput = Console.ReadLine();

@@ -14,7 +14,19 @@ class JournalPrompt{
         "What did you do day?",
         "What did you dream about last night? ",
         "What did you see outside today?",
-        "Did you leave the house today? If so answer y/n."
+        "Did you leave the house today? If so answer y/n.",
+        "What is your favorite type of music today?",
+        "Would you rather be beautiful, smart, or athletic? Why?",
+        "Write about your favorite childhood toy.",
+        "Write out the best or the worst day of your life.",
+        "Five years from now, I will be...",
+        "Invent and describe a new food.",
+        "Describe someone who is a hero to you and explain why.",
+        "Three goals I have set for myself are...",
+        "What did I learn today?",
+        "What was the most interesting thing I saw or heard today?",
+        "What is the current problem or challenge I am facing?",
+
     };
     public List<string> _journalPrompt = new List<string>(_prompt);
 
@@ -69,16 +81,16 @@ class Program
                     journal.Display();
                     break;
                 case 3:
-                    journal.LoadJournalFile();
+                    journal.LoadJournal();//File
                     break;
                 case 4:
-                    journal.CreateJournalFile();
+                    journal.CreateJournal();
                     break;
                 case 5:
                     Console.WriteLine("Thank you for usisg the Journal App!");
                     break;
                 default:
-                    Console.WriteLine($"So Sorry that isn't an option. Try again.");
+                    Console.WriteLine($"Wrong Options. Try again.");
                     break;
             }
 
