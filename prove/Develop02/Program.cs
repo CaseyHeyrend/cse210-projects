@@ -93,7 +93,7 @@ class Program
         2.Display
         3.Load
         4.Save
-        5. Quit
+        5.Quit
         So What would you like to do? ";
 
         Console.Write(options);
@@ -119,10 +119,5 @@ class Program
         DateTime now = DateTime.Now;
         string currentDate = now.ToString("F");
         return currentDate;
-    }
-    static void AddJournalEntry()
-    {
-        string MyJournalFile = "MyJournal.txt";
-        File.AppendAllText(MyJournalFile, "");
     }
 }
