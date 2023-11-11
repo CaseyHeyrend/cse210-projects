@@ -5,7 +5,6 @@ using System.Text.Json;
 public class Journal
 {
     public List<JournalEntry> _journal = new List<JournalEntry>();
-    //private string fileName = "MyJournal.txt";
     private string  _userFileAlias;
     
     
