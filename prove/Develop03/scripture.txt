@@ -1,0 +1,33 @@
+What does the program do?
+
+What user inputs does it have?
+What output does it produce?
+How does the program end?
+Runs out of Words or quit
+
+
+Class 
+Main Program
+    if some quit
+Scriptures
+    Hide Words and 
+    display text as a string, showing either the word in the string or and underscore.
+    Check for wether all words to evaluate as hidden or not (referencing the word class) -if so, quit program.
+    _reference : Reference
+    _words : List<Word>
+
+Reference
+    Keeps track of book, chapter, verse info
+    Display text string of the reference pieces (use construtor or getters or setters)
+
+    _book : string
+    _chapter : int
+    _verseStart : int
+    _verseEnd : int
+
+Words
+    Tracks whether single words are shown or hidden (bool)
+    Display text - get as a single word, showing either the word is the string or an underscore.
+    _text : string
+    _isHidden :bool
+
