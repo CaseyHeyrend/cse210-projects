@@ -17,21 +17,20 @@
     },
     {
         "key": 3,
-        "book":"Isaiah",
-        "chapter": 43,
-        "versreStart": 2,
-        "versreEnd": 0,
-        "text": ""
-
+        "book":"John",
+        "chapter": 3,
+        "versreStart": 16,
+        "versreEnd": 17,
+        "text":"For aGod so bloved the cworld, that he dgave his eonly begotten fSon, that whosoever gbelieveth in him should not perish, but have heverlasting ilife. For God asent not his Son into the world to bcondemn the world; but that the world through him might be csaved."
     },
 
     {
         "key": 4,
-        "book":"Isaiah",
-        "chapter": 43,
-        "versreStart": 2,
+        "book":"2 Corinthians",
+        "chapter": 5,
+        "versreStart": 19,
         "versreEnd": 0,
-        "text": ""
+        "text": "To wit, that God was in Christ, areconciling the world unto himself, not imputing their trespasses unto them; and hath committed unto us the word of reconciliation."
     }
 
 ]

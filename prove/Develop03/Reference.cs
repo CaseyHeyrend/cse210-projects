@@ -27,9 +27,8 @@ public class Reference
             entry._chapter = int.Parse(entries[2]);
             entry._verseStart = int.Parse(entries[3]);
             entry._verseEnd = int.Parse(entries[4]);
-
-            _reference.Add(entry);
-        }
+            _reference.Add(entry);//Problem child
+            }
     }
     public void ReferenceDisplay()
     {
