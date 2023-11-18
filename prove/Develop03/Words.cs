@@ -32,7 +32,7 @@ public class Word
         Console.Clear();
         Console.Write("Press Space or Enter to hide the word");
         Console.Write("Press 0 to Quit the program.");
-        //Console.Write($"{_hidden.Count}, {_result.Length}");
+        Console.Write($"{_hidden.Count}, {_result.Length}");
         Console.WriteLine($"{_refer}");
         for (var i = 0; i < _result.Length; i++)
         {
@@ -57,12 +57,12 @@ public class Word
         {
             // Getting a New Hidden word
             GetNewHiddenWord();
-
         }
         else if (input.Key == ConsoleKey.Q)
         {
             Environment.Exit(0);
         }
+
      }
      public void GetNewHiddenWord()
      {

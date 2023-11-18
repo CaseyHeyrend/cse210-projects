@@ -13,7 +13,6 @@ public class Reference
     private int _verseEnd;
 
     // The Methods
-
     public void LoadReference()
     {
         List<string> readText = File.ReadAllLines(_FileAlias).Where(arg => !string.IsNullOrWhiteSpace(arg)).ToList();

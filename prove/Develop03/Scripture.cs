@@ -22,7 +22,7 @@ public class Scripture
             Scripture entry = new Scripture();
 
             entry._key = entries[0];
-            entry._text = entries[6];
+            entry._text = entries[4];
 
             _scripture.Add(entry);
         }

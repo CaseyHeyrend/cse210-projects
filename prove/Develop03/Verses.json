@@ -1,14 +1,37 @@
 [
     {
-        "key":21,
-        "book":"",
-        "chapter": 1,
-        "versreStart": 5,
-        "versreEnd": 6,
-        "KeyPhrase":"",
-        "text":""
+        "key": 1,
+        "book":"Matthew",
+        "chapter": 7,
+        "versreStart": 7,
+        "versreEnd": 8,
+        "text": "Ask, and it shall be bgiven you; cseek, and ye shall find; dknock, and it shall be opened unto you: For every one that asketh receiveth; and he that aseeketh findeth; and to him that knocketh it shall be opened."
     },
     {
+        "key": 2,
+        "book":"Isaiah",
+        "chapter": 43,
+        "versreStart": 2,
+        "versreEnd": 0,
+        "text": "When thou passest through the awaters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the bfire, thou shalt not be cburned; neither shall the flame kindle upon thee."
+    },
+    {
+        "key": 3,
+        "book":"Isaiah",
+        "chapter": 43,
+        "versreStart": 2,
+        "versreEnd": 0,
+        "text": ""
 
+    },
+
+    {
+        "key": 4,
+        "book":"Isaiah",
+        "chapter": 43,
+        "versreStart": 2,
+        "versreEnd": 0,
+        "text": ""
     }
+
 ]

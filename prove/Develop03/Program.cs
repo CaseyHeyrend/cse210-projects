@@ -1,4 +1,6 @@
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 //Console.WriteLine("Hello Develop03 World!");
 // Clear the Console.
@@ -39,7 +41,7 @@ while (userOption != 3)
             word.GetRenderedText(scripture);
             word.GetRenderedRefer(scripture);
 
-            while (word._hidden.Count < word._result.Length)
+            while (word._hidden.Count < word._result.Length)//Problem child
             {
                 word.Show(refer1);
                 word.GetReadKey();
@@ -93,4 +95,5 @@ int UserOption()
         Console.WriteLine($"Exception Error:  {exception.Message}");
     }
     return userOption;
+
 }
