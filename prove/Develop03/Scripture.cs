@@ -1,69 +1,72 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 // Code Template for the category for text known as ...
 public class Scripture
 {
     // The Variables
-    public List<Scripture> _scripture = new List<Scripture>();
-    private string _FileAlias = "Versestext.txt";
-    private string _key;
-    private string _text;
-    public int _index;
-    public string _scriptureVerses;
-    
+    private Reference _reference;
+    private List<Word> _words;
+   
     //The Methods
-    public void LoadScriptures()
+    public Scripture(string book, int chapter, int verse, string text)
     {
-        List<string> readText = File.ReadAllLines(_FileAlias).Where(arg => !string.IsNullOrWhiteSpace(arg)).ToList();
+        _reference = new Reference(book, chapter, verse);
+        _words = new List<Word>();
 
-        foreach (string line in readText)
+        string[] splitText = text.Split(' ');
+        foreach (string word in splitText)
         {
-            string[] entries = line.Split(";");
-            Scripture entry = new Scripture();
-
-            entry._key = entries[0];
-            entry._text = entries[4];
-
-            _scripture.Add(entry);
+            _words.Add(new Word(word));
         }
     }
-    public void ScriptureDisplay()
+    public void Display()
     {
-        foreach (Scripture item in _scripture)
+        Console.WriteLine($"{_reference}:");
+        foreach (Word word in _words)
         {
-            item.ShowScripture();
+            if (word.IsHidden())
+            {
+                Console.Write(new string('_', word.GetText().Length) + " ");
+            }
+            else
+            {
+                Console.Write(word.GetText() + " ");
+            }
         }
     }
-
-    public void ShowScripture()
+    public bool HideRandomWord()
     {
-        Console.WriteLine($"{_text}");
+        List<Word> visibleWords = GetVisibleWords();
+        if (visibleWords.Count >2)
+            return false;
+        
+        Random random = new Random();
+        int randomIndex1 = random.Next(visibleWords.Count);
+        int randomIndex2;
+
+        do
+        {
+            randomIndex2 = random.Next(visibleWords.Count);
+        }
+        while (randomIndex1 == randomIndex2);
+
+        visibleWords[randomIndex1].Hide();
+        visibleWords[randomIndex2].Hide();
+        return true;     
+    }
+    private List<Word> GetVisibleWords()
+    {
+        List<Word> visibleWords = new List<Word>();
+        foreach (Word word in _words)
+        {
+            if (!word.IsHidden())
+                visibleWords.Add(word);
+        }
+        return visibleWords;
     }
 
-    public int GetRandomIndex()
-    {
-        var random = new Random();
-        _index = random.Next(_scripture.Count);
-        return _index;
-    }
-
-    public string RandomScripture()
-    {
-        _index = GetRandomIndex();
-        return _scriptureVerses = _scripture[_index]._text;
-    }
-    public void HideWords()
-    {
-
-    }
-    public void GetRenderedText()
-    {
-
-    }
-    public void IsCompleteHidden()
-    {
-
-    }
-    
+ 
+ 
 
 }
