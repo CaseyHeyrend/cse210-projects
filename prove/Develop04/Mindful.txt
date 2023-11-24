@@ -1,0 +1,41 @@
+Inheritance
+
+Activity:
+DisplayStartingMessage() : void
+DisplayQuestions
+Variables:
+_name : string
+_description : string
+
+
+Breathing:
+Inheritance from Activity
+run() : void
+
+
+
+Listing:
+Inheritance from Activity
+
+
+
+Reflecting:
+Inheritance from Activity
+
+What is a benefit of having a base Activity class, instead of having only the three specific activity classes themselves?
+ --To reduce boilerplate code, clutter, make the code more reusable, if there are changes that need made in the code, it only has be changed one spot versus in multiple locations
+
+* Notice that all three of the derived classes contain a run function. Why can it not be defined in the base class and inherited?
+    * Different usages same name but different code inside each method
+
+* Can a derived class method call a base class method? For example, can DisplayQuestions() in the ReflectingActivity class call the ShowSpinner() method? Why or Why not?
+    * Yep because its is the base class everything in a child class can be use functions and attributes in parent class.
+
+* Notice that two of the three activity classes store a list of prompts. What is a potential benefit of defining it in those classes as apposed to including it in the base class and having the activity that does not need it simply ignore it and leave it empty?
+    * Not all activities necessarily need lists. The ones that apply to specific activity its easier to find if they are stored. Possibly make a no parameter for the object class.
+
+* What is a benefit to requiring parameters for a constructor, instead of simply using the no-argument constructor and letting people use setters later to set the values?
+    * gives control over the expected output
+    * creates more security (by setting as private) can use setters and getters 
+    * no risk of arbitrary code execution.
+
