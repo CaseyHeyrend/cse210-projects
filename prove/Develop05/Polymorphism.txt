@@ -1,0 +1,21 @@
+Polymorphism
+
+Class Goal
+    -- _shortName : string
+    -- _description : string
+    -- _goalPoints : int
+    -- _status : int
+    -- Goal(sname,description,points):
+
+Class SimpleGoal
+    --
+    --
+
+Class EternalGoal
+    --
+
+Class ChecklistGoal
+    ==
+
+Class GoalManager
+    --
