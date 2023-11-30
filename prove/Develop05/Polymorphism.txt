@@ -5,17 +5,69 @@ Class Goal
     -- _description : string
     -- _goalPoints : int
     -- _status : int
-    -- Goal(sname,description,points):
+
+    -- Goal(sname,description,points)
+
+    -- RecordEvent() : void
+    -- IsComplete() : void
+    -- GetDetailsString() : string
+    -- GetStringRepresentation() : string
 
 Class SimpleGoal
-    --
-    --
+    -- _isComplete : bool
+
+    -- SimpleGoal(name,description, points)
+
+    -- RecordEvent() : void
+    -- IsComplete() : bool
+    -- GetStringRepresentation() : string
 
 Class EternalGoal
-    --
+    -- EternalGoal(name,description,points)
+
+    -- RecordEvent() : void
+    -- IsComplete() : bool
+    -- GetStringRepresentation() : string
 
 Class ChecklistGoal
-    ==
+    -- _amountCompleted : int
+    -- _target :int
+    -- _bonus : int
+
+    -- ChecklistGoal(name,description,points,target,bonus)
+    
+    -- RecordEvent() : void
+    -- IsComplete() : void
+    -- GetDetailsString() : string
+    -- GetStringRepresentation() : string
 
 Class GoalManager
+    -- _goals : List<Goals>
+    -- _score : int
+    
+    -- GoalManager()
+    -- Start() : void
+    -- DisplayPlayerInfo() : void
+    -- ListGoalNames() : void
+    -- ListGoalDetails() : void
+    -- CreateGoal() : void
+    -- RecordEvent() : void
+    -- SaveGoal() : void
+    -- LoadGoal() : void
+
+What is a benefit to having a separate class like GoalManager instead of just using static functions in Program.cs for all of the menu-related functionality?
+    -- 
+
+What is a benefit of making the RecordEvent method an abstract method instead of leaving it blank or providing a default version?
+    -- 
+
+Notice that in the design above, the GetDetailsString method has a default implementation and is only overridden by the ChecklistGoal class. 
+Why is the GetDetailsString method only overridden by the ChecklistGoal class and not the other two derived classes?
     --
+
+Notice that the EternalGoal class does not define any member variables. 
+What is a reason to still have this class, even though it does not define any member variables?
+    -- 
+
+Why does the SimpleGoal constructor not need a parameter for the _isComplete variable?
+    -- 
