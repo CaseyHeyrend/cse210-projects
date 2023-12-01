@@ -28,7 +28,7 @@ class Program
                 case 1:
                     Console.Clear();
                     int goalInput = 0;
-                    while (goalInput != 5)
+                    while (goalInput != 4)
                     // Switch case for the Goal Menu
                     {
                         goalInput = goalChoice.GoalChoice();
@@ -36,12 +36,20 @@ class Program
                         {
                             case 1:
                                 // Simple Goal
+                                SimpleGoal newSimpleGoal = new SimpleGoal();
+                                goals.addGoal(newSimpleGoal);
                                 break;
                             case 2:
                                 //Eternal Goal
+                                EternalGoal newEternalGoal = new EternalGoal();
+                                
+                                goals.addGoal(newEternalGoal);
                                 break;
                             case 3:
                                 //Checklist Goal
+                                ChecklistGoal newChecklistGoal = new ChecklistGoal();
+                                
+                                goals.addGoal(newChecklistGoal);
                                 break;
                             case 4:
                                 // Exit

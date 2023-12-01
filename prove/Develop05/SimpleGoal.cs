@@ -18,9 +18,5 @@ public class SimpleGoal : Goal //Inheritance
         _status = status;
     }
 
-    public override void CreateChildGoal()
-    {
-        CreateBaseGoal();
-    }
    
 }

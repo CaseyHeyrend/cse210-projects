@@ -20,20 +20,17 @@ public class ChecklistGoal : Goal
         _stepCounter = stepCounter;
     }
 
-    public override void CreateChildGoal()
-    {
-        CreateChildGoal();
-        
-        Console.Write("How many times does this goal need to be accomplished for a bonus? ");
-        string stringChecklistSteps = Console.ReadLine();
-        _steps = Convert.ToInt32(stringChecklistSteps);
+    //public override void CreateChildGoal(){
+        //CreateChildGoal();
+        //Console.Write("How many times does this goal need to be accomplished for a bonus? ");
+        //string stringChecklistSteps = Console.ReadLine();
+        //_steps = Convert.ToInt32(stringChecklistSteps);
 
-        Console.Write("What is the bonus for accomplishing it that many times? ");
-        string bonusPoints = Console.ReadLine();
-        _bonusPoints = Convert.ToInt32(bonusPoints);
+        //Console.Write("What is the bonus for accomplishing it that many times? ");
+        //string bonusPoints = Console.ReadLine();
+        //_bonusPoints = Convert.ToInt32(bonusPoints);
 
-        _stepCounter = 0;
-    }
+        //_stepCounter = 0;}
 
     public override bool IsComplete()
     {

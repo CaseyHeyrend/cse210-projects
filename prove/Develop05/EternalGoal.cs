@@ -18,10 +18,7 @@ public class EternalGoal : Goal
         _goalPoints = goalPoints;
         _stepCounter = 0;
     }
-    public override void CreateChildGoal()
-    {
-        CreateChildGoal();
-    }
+    //public override void CreateChildGoal() {CreateChildGoal();}
     public override void ListGoal()
     {
         Console.Write($"[ ] {_name} ({_description})");

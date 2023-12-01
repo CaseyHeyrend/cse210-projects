@@ -41,10 +41,7 @@ public class Goal
         return line;
     }
 
-    public virtual string CreateChildGoal()
-    {
-
-    }
+    //public virtual string CreateChildGoal(){}
 
     public virtual void RecordEvent()
     {
