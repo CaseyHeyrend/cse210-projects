@@ -12,7 +12,7 @@ public class ChoiceMenu
     1. Greate New Goal
     2. List Goals
     3. Save Goals
-    4, Load Goals
+    4. Load Goals
     5. Record Goal Event
     6. Quit
     *******************************************
