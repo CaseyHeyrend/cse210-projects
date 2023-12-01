@@ -2,45 +2,35 @@ using System;
 
 public class EternalGoal : Goal
 {
-     private int _stepCounter;
+     // Attributes
+     private string _goalType = "EternalGoal:";
+     private bool _status;
 
-    public EternalGoal()
+     // Constructors
+    public EternalGoal(string goalType, string name, string description, int points) : base(goalType, name, description, points)
     {
-        _name = "";
-        _description = "";
-        _goalPoints = 50;
-        _stepCounter = 0;
+        _status = false;
     }
-    public EternalGoal(string name, string description, int goalPoints)
+    public EternalGoal(string goalType, string name, string description, int points, bool status) : base(goalType, name, description, points)
     {
-        _name = name;
-        _description = description;
-        _goalPoints = goalPoints;
-        _stepCounter = 0;
+        _status = status;
     }
-    //public override void CreateChildGoal() {CreateChildGoal();}
-    public override void ListGoal()
+    //Methods
+    public override void ListGoal(int i)
     {
-        Console.Write($"[ ] {_name} ({_description})");
-    }
-    public override bool IsComplete()
-    {
-        return false;
+        Console.WriteLine($"{i}. [ ] {GetName()} ({GetDescription()})");
     }
     public override string SaveGoal()
     {
-        string line = "";
-        line = $"EternalGoal:" + _name + "," + _description + "," + _goalPoints.ToString();
-        return line;
+        return ($"{_goalType}; {GetName()}; {GetDescription()}; {GetPoints()}; {_status}");
     }
-    public override void RecordEvent()
+    public override string LoadGoal()
     {
-        _stepCounter++;
+        return ($"{_goalType}; {GetName()}; {GetDescription()}; {GetPoints()}; {_status}");
     }
-    public override int CalculateAGP()
+    public override void RecordGoalEvent(List<Goal> goals)
     {
-        int points = _goalPoints;
-        return points;
+        Console.WriteLine($"Congratulations! You have earned {GetPoints()} points!");
     }
 
 }

@@ -1,66 +1,42 @@
 using System;
 
-public class Goal
+public abstract class Goal
 {
     // Attributes 
-    protected string _name;//Short Name
-    protected string _description;
-    protected int _goalPoints;
-    protected bool _status;
-    
-    public Goal()
-    {
-        _name = "Test Name";
-        _description = "Test Description";
-        _goalPoints = 50;
-        _status = false;
-    }
+    private string _goalType;
+    private string _name;
+    private string _description;
+    private int _points;
 
-    public Goal(string name, string description, int goalPoints)
+    //Constructors
+    public Goal(string goalType, string name, string description, int points)
     {
+        _goalType = goalType;
         _name = name;
         _description = description;
-        _goalPoints = goalPoints;
+        _points = points;
     }
-     protected void CreateBaseGoal()
+
+    public string GoalType()
     {
-        Console.Write("What is the name of your goal? ");
-        _name = Console.ReadLine();
-
-        Console.Write("What is a short description of it? ");
-        _description = Console.ReadLine();
-
-        Console.Write("What is the amount of points associated with this goal? ");
-        string stringGoalPoints = (Console.ReadLine());
-        _goalPoints = Convert.ToInt32(stringGoalPoints);  
+        return _goalType;
     }
-
-    public virtual string SaveGoal()
+    public string GetName()
     {
-        string line = "";
-        return line;
+        return _name;
     }
-
-    //public virtual string CreateChildGoal(){}
-
-    public virtual void RecordEvent()
+    public string GetDescription()
     {
-
+        return _description;
     }
-
-    public virtual bool IsComplete()
+    public int GetPoints()
     {
-        return false;
+        return _points;
     }
 
-    public virtual void ListGoal()
-    {
-
+    //Methods
+    public abstract void ListGoal(int i);
+    public abstract string SaveGoal();
+    public abstract string LoadGoal();
+    public abstract void RecordGoalEvent(List<Goal> goals); 
     }
-
-    public virtual int CalculateAGP()
-    {
-        return 0;
-    }
-
-}

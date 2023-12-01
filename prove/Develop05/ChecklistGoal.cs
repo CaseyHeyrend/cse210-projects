@@ -1,86 +1,90 @@
 using System;
+using System.Diagnostics;
 
 public class ChecklistGoal : Goal
 {
+    // Attributes
+    private string _goalType = "Checklist Goal:";
+    private int _numTimes;
     private int _bonusPoints;
-    private int _steps;
-    private int _stepCounter;
+    private bool _status;
+    private int _count;
 
-    public ChecklistGoal()
+    // Constructors
+    public ChecklistGoal(string goalType, string name, string description, int points, int numTimes, int bonusPoints) : base(goalType, name, description, points)
     {
-
-    }
-    public ChecklistGoal(string name, string description, int goalPoints, int bonusPoints, int steps, int stepCounter)
-    {
-        _name = name;
-        _description = description;
-        _goalPoints = goalPoints;
+        _status = false;
+        _numTimes = numTimes;
         _bonusPoints = bonusPoints;
-        _steps = steps;
-        _stepCounter = stepCounter;
+        _count = 0;
     }
-
-    //public override void CreateChildGoal(){
-        //CreateChildGoal();
-        //Console.Write("How many times does this goal need to be accomplished for a bonus? ");
-        //string stringChecklistSteps = Console.ReadLine();
-        //_steps = Convert.ToInt32(stringChecklistSteps);
-
-        //Console.Write("What is the bonus for accomplishing it that many times? ");
-        //string bonusPoints = Console.ReadLine();
-        //_bonusPoints = Convert.ToInt32(bonusPoints);
-
-        //_stepCounter = 0;}
-
-    public override bool IsComplete()
+    public ChecklistGoal(string goalType, string name, string description, int points, bool status, int numTimes, int bonusPoints, int count) : base(goalType, name, description, points)
     {
-        if (_stepCounter >= _steps)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        _status = status;
+        _numTimes = numTimes;
+        _bonusPoints = bonusPoints;
+        _count = count;
     }
-
-    public override void RecordEvent()
+    public int GetTimes()
     {
-        _stepCounter ++;
+        return _numTimes;
     }
-    public override int CalculateAGP()
+    public void SetTimes()
     {
-        int points = 0;
-
-        points = _stepCounter * _goalPoints;
-
-        bool status = IsComplete();
-        if (status == true)
-        {
-            points += _bonusPoints;
-        }
-        return points;
+        _count = _count + 1;
     }
-    public override void ListGoal()
+    public int GetCount()
     {
-        string statusSymbol = "";
-        bool status = IsComplete();
-        if (status == true)
+        return _count;
+    }
+    public void SetCount()
+    {
+
+    }
+    public int GetBonusPoints()
+    {
+        return _bonusPoints;
+    }
+    public Boolean Finished()
+    {
+        return _status;
+    }
+    //Methods
+
+    public override void ListGoal(int i)
+    {
+        if (Finished() == false)
         {
-            statusSymbol = "X";
+            Console.WriteLine($"{i}. [ ] {GetName()} ({GetDescription()})  --  Currently Completed: {GetCount()}/{GetTimes()}");
         }
-        else
+        else if (Finished() == true)
         {
-            statusSymbol = " ";
+            Console.WriteLine($"{i}. [X] {GetName()} ({GetDescription()})  --  Completed: {GetCount()}/{GetTimes()}");
         }
-        
-        Console.Write($"[{statusSymbol}] {_name} ({_description}) -- Currently Completed {_stepCounter}/{_steps}");
     }
     public override string SaveGoal()
     {
-        string line = "";
-        line = $"ChecklistGoal:" + _name + "," + _description + "," + _goalPoints.ToString() + "," + _bonusPoints.ToString() + "," + _steps.ToString() + "," + _stepCounter.ToString();
-        return line;
+        return ($"{_goalType}; {GetName()}; {GetDescription()}; {GetPoints()}; {_status}; {GetTimes()}; {GetBonusPoints()}; {GetCount()}");
     }
+    public override string LoadGoal()
+    {
+        return ($"Simple Goal:; {GetName()}; {GetDescription()}; {GetPoints()}; {_status}; {GetTimes()}; {GetBonusPoints()}; {GetCount()}");
+    }
+    public override void RecordGoalEvent(List<Goal> goals)
+    {
+        SetTimes();
+        int points = GetPoints();
 
+        if (_count == _numTimes)
+        {
+            _status = true;
+            points = points + _bonusPoints;
+
+            Console.WriteLine($"Congratulations! You have earned {points} points!");
+        }
+        else
+        {
+            Console.WriteLine($"Congratulations! You have earned {GetPoints()} points!");
+        }
+    }
 }
