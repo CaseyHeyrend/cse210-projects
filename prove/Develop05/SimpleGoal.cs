@@ -2,20 +2,18 @@ using System;
 
 public class SimpleGoal : Goal //Inheritance
 {
-    public SimpleGoal()
-    {
-        _name = "Name of Simple Goal";
-        _description = "Description of Simple Goal";
-        _goalPoints = 50;
-        _status = false;
-    }
+    // Attributes
+    private string _goalType ="Simple Goal:";
+    private bool _status;
+    
 
-    public SimpleGoal(string name, string description, int goalPoints, bool status)
+    public SimpleGoal(string goalType, string name, string description, int points) : base(goalType, name, description, points)
     {
-        _name = name;
-        _description = description;
-        _goalPoints = goalPoints;
         _status = status;
+    }
+    public SimpleGoal(string goalType, string name, string description, int points, bool status) : base(goalType, name, description, points)
+    {
+        
     }
 
    
