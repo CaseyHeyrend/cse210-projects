@@ -1,0 +1,183 @@
+Foundation 1
+    Program Class
+        -- List<Video> vidsList
+            -- vid1
+            -- vid2
+            -- vid3
+    Video Class
+        //Attributes 
+            -- _title : string
+            -- _author : string
+            -- _length : double
+            -- List<Comment> _comments
+        //Constructors
+            -- Video(title, author, length)
+        //Methods
+            -- AddComment(Comment comment) : void 
+            -- GetNumberofComments() : int 
+            -- DisplayInfo() : void
+
+    Comments Class
+        //Attributes
+            -- _name : string
+            -- _text : string
+        //Constructors
+            -- Comment(name, text)
+                -- GetComments()
+                -- GetText()
+        //Methods
+            -- DisplayInfo()
+
+
+Foundation 2
+    Program Class
+        -- 
+    Order Class
+        //Attributes
+            -- List<Product>_products
+            -- Customer _customer
+        //Constructors
+            -- Order(List<Product> products, Customer customer)
+        //Methods
+            -- CalculateShipping() : double
+            -- CalculateTotalPrice() : double
+            -- GeneratePackingLabel() : string
+            -- GenerateShippingLabel() : string
+            -- GenerateTotalCost() : string
+            -- DisplayResults() : void
+    Product Class
+        //Attributes
+            -- _name : string
+            -- _productID : string
+            -- _price : double
+            -- _quantity : int
+        //Constructors
+            Product(name, productID, price, quantity)
+        //Methods
+            -- CalculatePrice() : double
+            -- GetName() : string
+            -- GetProductID() : string
+            -- GetPrice() : double
+            -- GetQuantity() : int
+    
+    Customer Class
+        //Attributes
+            -- _name : string
+            -- _address : int
+        //Constructors
+            -- Customer(name, Address address)
+        //Methods
+            -- IsFromUSA() : bool
+            -- GetName() : string
+            -- GenerateAddress() : string
+    Address Class
+        //Attributes
+            -- _street : string
+            -- _city : string
+            -- _state : string
+            -- _country : string
+        //Constructors
+            -- Address(street,city,state,country)
+        //Methods
+            -- IsUSAAddress() : bool
+            -- GetFullAddress() : string
+    
+
+Foundation 3
+    Program Class
+        --
+    Event Class
+        //Attributes
+            -- _title : string
+            -- _description : string
+            -- _date : DateTime
+            -- _time : TimeSpan
+            -- _address : Address
+        //Constructors
+            -- Event() : string
+        //Methods
+            -- GetStandardDetails() : string
+            -- GetFullDetails() : string
+            -- GetShortDescription() : string
+    Lecture Class
+        //Attributes
+            -- _speaker : string
+            -- _capacity : int
+        //Constructors
+            -- Lecture()
+        //Methods
+            -- GetFullDetails() : string
+    Reception Class
+        //Attributes
+            -- _rsvp : string
+        //Constructors
+            -- Reception()
+        //Methods
+    Outdoor Gathering Class
+        //Attributes
+            -- _weatherForecast : string
+        //Constructors
+            -- OutdoorGathering()
+        //Methods
+            --GetFullDetails() : string
+    Address Class
+        //Attributes
+            -- _street : string
+            -- _city : string
+            -- _state : string
+            -- _country : string
+        //Constructors
+            -- Address()
+        //Methods
+            -- GetFullAddress() : string
+    
+Foundation 4
+    Program Class
+        -- List <Exercise> exeList 
+
+        -- Running running 
+        -- Cycling stationaryBicycles
+        -- Swimming swimlaps
+    Activity Class(Exercise)
+        //Attributes 
+            -- _date : string
+            -- _minutes : int
+            -- _name : string
+        //Constructors
+            -- Exercise(date, minutes)
+        //Methods
+            -- CalculateDistance() : double
+            -- CalculateSpeed() : double
+            -- CalculatePace() : double
+            -- GetSummary() : string
+    Running
+        //Attributes 
+            -- _distance : double
+        //Constructors
+            -- Running(date, minutes, distance)
+        //Methods
+            -- GetDistance() : double
+            -- GetSpeed() : double
+            -- GetPace() : double
+            -- GetSummary() : string
+    Cycling(Stationary Bicycles)
+        //Attributes 
+            -- _speed : double
+        //Constructors
+            -- Cycling(date, minutes, speed)
+        //Methods
+            -- GetDistance() : double
+            -- GetSpeed() : double
+            -- GetPace() : double
+            -- GetSummary() : string
+    Swimming
+        //Attributes 
+            -- numlaps : double
+        //Constructors
+            -- Swimming(date, minutes, numlaps)
+        //Methods
+            -- GetDistance() : double
+            -- GetSpeed() : double
+            -- GetPace() : double
+            -- GetSummary() : string
+    
