@@ -33,11 +33,11 @@ class Program
         vidsList.Add(vid2);
 
         //Video 3
-        Video vid3 = new Video("", "", 403);
+        Video vid3 = new Video("Programming vs Coding - What's the difference?", "Aaron Jack", 558);
 
-        Comment vid3Comment1 = new Comment("Adam", "It is Good");
-        Comment vid3Comment2 = new Comment("Adam", "It is Good");
-        Comment vid3Comment3 = new Comment("Adam", "It is Good");
+        Comment vid3Comment1 = new Comment("suraiyaanjum2907", "The greatest thing which i miss from Java in Python is the semicolon. I always feel like something is missing after writing a line.");
+        Comment vid3Comment2 = new Comment("jimf.6879", "In coding also we sometimes need to write logic but that's mostly predefined. In programming it's like doing algorithm, you  need practice and doesn't guarantee that you will get answer. Programming needs lot of practice.");
+        Comment vid3Comment3 = new Comment("lofioto", "Amazing. Clean, fun to watch and SO educational. Great job! Thanks you so much!!!!");
 
         vid3.ListComment(vid3Comment1);
         vid3.ListComment(vid3Comment2);
