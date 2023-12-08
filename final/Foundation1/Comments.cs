@@ -3,13 +3,13 @@ using System;
 public class Comment
 {
     //Attributes 
-    private string _name;
+    private string _userName;//name
     private string _text;
     
     //Constructors
-    public Comment(string name, string text)
+    public Comment(string username, string text)
     {
-        _name = name;
+        _userName = username;
         _text = text;
 
     }
@@ -17,6 +17,6 @@ public class Comment
 
     public void DisplayInfo()
     {
-        Console.WriteLine($"{_name} - {_text}");
+        Console.WriteLine($"{_userName} - {_text}");
     }
 }
