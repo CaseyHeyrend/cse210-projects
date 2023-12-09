@@ -1,2 +1,8 @@
 "2052 Sunny Day Drive", "Huntington Beach", "CA", "USA"
 "Hunter Underwood"
+
+"3299 Snider Street", "Englewood", "CO", "USA"
+"Manuel Love"
+
+"3910 Richison Drive", "Melstone", "MT", "USA"
+"Louie Mills"
