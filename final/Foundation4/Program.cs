@@ -8,7 +8,7 @@ class Program
         //Console.WriteLine("Hello Foundation4 World!");
         List <Exercise> exeList = new List<Exercise>();
         
-        Running running = new Running("June 17, 2024", 30, 5.8);
+        Running running = new Running("June 17, 2024", 30, 5);
         exeList.Add(running);
 
         Cycling stationaryBicycles = new Cycling("June 19, 2024", 60, 15);
