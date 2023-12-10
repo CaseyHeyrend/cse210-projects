@@ -1,1 +1,6 @@
-For the Foundation 1 the product was coding in general. The names was changed to usernames.
+For the Foundation 1, the product was caring for trees. The program is to make a YouTube video program and apply the abstraction principle. 
+At first, I thought of using real videos and comments on said video, but then I looked at Foundation 2, where they need products. 
+I couldn’t think of a coding product that could be shipped in real life. I thought of trees because they are natural and some holidays use trees. 
+The videos could be fundamental video ideas, and the comments hint at what the video talks about. 
+Foundation 1 contains a Video class and a Comments class where they all meet in the main program. 
+It runs, and it works as well.
