@@ -1,11 +1,11 @@
 using System;
 
-public class Receptions : Event
+public class Reception : Event
 {
     //Attributes
     private string _rsvpEmail;
     //Constructors
-    public Receptions(string title, string description, string date, string time, Address address, string rsvpEmail) : base(title, description, date, time, address)
+    public Reception(string title, string description, string date, string time, Address address, string rsvpEmail) : base(title, description, date, time, address)
     {
         _rsvpEmail = rsvpEmail;
     }

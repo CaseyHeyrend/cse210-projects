@@ -1,13 +1,13 @@
 using System;
 
-public class Lectures : Event
+public class Lecture : Event
 {
     //Attributes
     private string _speaker;
     private int _capacity;
  
     //Constructors
-    public Lectures(string title, string description, string date, string time, Address address, string speaker, int capacity) : base(title, description, date, time, address)
+    public Lecture(string title, string description, string date, string time, Address address, string speaker, int capacity) : base(title, description, date, time, address)
     {
         _speaker = speaker;
         _capacity = capacity;
@@ -35,11 +35,11 @@ public class Lectures : Event
     }
     public string GenerateShortLect()
     {
-        string shortLectures = "";
+        string shortLecture = "";
         string eventType = ReturnEventType();
 
-        shortLectures += "Event Type: " + eventType + "\n";
-        shortLectures += GenerateShortDes();
-        return shortLectures;
+        shortLecture += "Event Type: " + eventType + "\n";
+        shortLecture += GenerateShortDes();
+        return shortLecture;
     }
 }
