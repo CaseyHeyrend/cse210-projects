@@ -1,0 +1,5 @@
+For the Foundation 2, the product was caring for trees. The program is to make products and apply the encapsulation principle. 
+All the names and addresses are randomly generated. I took the topic from Foundation 1 about taking care of trees. 
+There are many different types of taking care of trees. However, there are some similar products for taking care of trees. 
+I thought of trees because they are natural and some holidays use trees. Foundation 2 contains a lot of classes but they are needed. 
+There are Address, Customer, Order, and Product classes which all meet in the main program. It runs, and it works as well.
