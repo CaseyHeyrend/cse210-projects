@@ -9,10 +9,10 @@ class Program
         List<Video> vidsList = new List<Video>();
 
         //Video 1
-        Video vid1 = new Video("Who is Grace Hopper? Meet the Queen of Code", "HoneyPot", 608);//Real Video and Comments
-        Comment vid1Comment1 = new Comment("mohamedaityoussef9965", "this is great, i love the editing and this a great story, as CS student i'm forever grateful for grace hopper");
-        Comment vid1Comment2 = new Comment("whoisryosuke", "Really good energy + inspo for the morning. Great video!");
-        Comment vid1Comment3 = new Comment("Climacticc_Chaos", "Kinda ready to hear how she uses the compiler to translate words into binary across transistor logic gates");
+        Video vid1 = new Video("How to care for trees", "Meadow Le", 310);
+        Comment vid1Comment1 = new Comment("Uriah Waters", "I didn't know there was so much info for taking care of trees.");
+        Comment vid1Comment2 = new Comment("Emmy Bean", "The knowledge of taking care of something is incredible to know about.");
+        Comment vid1Comment3 = new Comment("Grant Montoya", "Picking where the tree is going to go is important and stay on the decision for the tree.");
 
         vid1.ListComment(vid1Comment1);
         vid1.ListComment(vid1Comment2);
@@ -21,10 +21,10 @@ class Program
         vidsList.Add(vid1);
 
         //Video 2
-        Video vid2 = new Video("How This Guy Uses A.I. to Create Art", "WIRED", 1032);//Real Video and Comments
-        Comment vid2Comment1 = new Comment("hanblue4413", "For someone who deals with such abstract and personal concepts, he's amazing at articulating exactly what he's thinking");
-        Comment vid2Comment2 = new Comment("austininkosi1494", "This is actually gorgeous. People bash on how computers make everything really easy, with music and art etc. But this is true art. He loves the way it makes the designs, he loves the phenomena. It's beautiful to hear him talk so passionately about A.I. generated art.");
-        Comment vid2Comment3 = new Comment("arpitjaiswal3794", "art is an expression of human emotions and feelings and it touch the soul of the watcher, AI can copy and improvise but this art will always loose the essence ,no  matter how beautiful it might seems");
+        Video vid2 = new Video("What not to do with trees care", "Molly Carpenter", 500);
+        Comment vid2Comment1 = new Comment("Ross Erickson", "Oh, trees need lots of water to live. Note to self.");
+        Comment vid2Comment2 = new Comment("Miley Potter", "Spacing for the tree so it can grow and trimming is good as well.");
+        Comment vid2Comment3 = new Comment("Cale Goodman", "Sometimes you gonna make a mistake and take a mulch needed a break.");
 
         vid2.ListComment(vid2Comment1);
         vid2.ListComment(vid2Comment2);
@@ -33,11 +33,10 @@ class Program
         vidsList.Add(vid2);
 
         //Video 3
-        Video vid3 = new Video("Programming vs Coding - What's the difference?", "Aaron Jack", 558);
-
-        Comment vid3Comment1 = new Comment("suraiyaanjum2907", "The greatest thing which i miss from Java in Python is the semicolon. I always feel like something is missing after writing a line.");
-        Comment vid3Comment2 = new Comment("jimf.6879", "In coding also we sometimes need to write logic but that's mostly predefined. In programming it's like doing algorithm, you  need practice and doesn't guarantee that you will get answer. Programming needs lot of practice.");
-        Comment vid3Comment3 = new Comment("lofioto", "Amazing. Clean, fun to watch and SO educational. Great job! Thanks you so much!!!!");
+        Video vid3 = new Video("What you need to care for trees guide", "Coby Bush", 603);
+        Comment vid3Comment1 = new Comment("Heath Paul", "Trees can get sick!");
+        Comment vid3Comment2 = new Comment("Karen Bell", "There is tree food. Is it the same as plant food?");
+        Comment vid3Comment3 = new Comment("Jeremy Blender", "There are many different products, and some are quite similar to each other.");
 
         vid3.ListComment(vid3Comment1);
         vid3.ListComment(vid3Comment2);
