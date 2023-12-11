@@ -31,7 +31,7 @@ public class Exercise
     }
     public string GetSummary()
     {
-        string summary = $"{_date} {_name} ({_minutes} min) - Distance {CalculateDistance()} miles, Speed: {CalculateSpeed()} mph, Pace: {CalculatePace()} min per mile";
+        string summary = $"{_date} {_name} ({_minutes} mins) - Distance {CalculateDistance()} miles, Speed: {CalculateSpeed()} mph, Pace: {CalculatePace()} min per mile";
         return summary;
     }
 }
