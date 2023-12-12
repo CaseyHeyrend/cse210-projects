@@ -19,7 +19,7 @@ public class Product
     //Methods
     public double CalculatePrice()
     {
-        return _price * _quantity;
+        return Math.Round(_price * _quantity);
 
     }
     public string GetName()

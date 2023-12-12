@@ -14,8 +14,12 @@ class Program
         List<Product> productsList1 = new List<Product>();
 
         Product p1001 = new Product("Count Tree Food", "CTF1", 11.48 , 2);
-        Product p1002 = new Product("Tree Wrap", "TW04", 4.98, 5);
+        Product p1002 = new Product("Tree Wrap", "TW04", 4.98, 3);
         Product p1003 = new Product("Tree Diaper", "TD30", 36.00, 1);
+
+        productsList1.Add(p1001);
+        productsList1.Add(p1002);
+        productsList1.Add(p1003);
 
         Order order1 = new Order(productsList1, customer1);
 
@@ -32,6 +36,10 @@ class Program
         Product p2002 = new Product("Gardening Gloves", "GG06", 6.98, 1);
         Product p2003 = new Product("Mulch", "M003", 3.98, 2 );
 
+        productsList2.Add(p2001);
+        productsList2.Add(p2002);
+        productsList2.Add(p2003);
+
         Order order2 = new Order(productsList2, customer2);
 
         Console.WriteLine("Order Number: 2");
@@ -47,6 +55,10 @@ class Program
         Product p3002 = new Product("Tree Food", "TF34", 34.99, 1);
         Product p3003 = new Product("Stainless Steel Lopper/Pruner Set", "SSSET", 44.99, 1);
         
+        productsList3.Add(p3001);
+        productsList3.Add(p3002);
+        productsList3.Add(p3003);
+
         Order order3 = new Order(productsList3, customer3);
 
         Console.WriteLine("Order Number: 3");
