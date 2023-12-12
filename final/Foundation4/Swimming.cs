@@ -1,6 +1,6 @@
 using System;
 
-public class Swimming : Exercise
+public class Swimming :Exercise
 {
      //Attributes 
      private double _laps;//Number of Laps
@@ -26,7 +26,7 @@ public class Swimming : Exercise
     }
     public override double CalculatePace()//GetPace
     {
-        double pace = Math.Round(_minutes / CalculateDistance());
+        double pace = _minutes / CalculateDistance();
         return pace;
     }
 }
