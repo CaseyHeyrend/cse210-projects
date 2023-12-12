@@ -1,6 +1,6 @@
 using System;
 
-public class Swimming :Exercise
+public class Swimming : Exercise
 {
      //Attributes 
      private double _laps;//Number of Laps
