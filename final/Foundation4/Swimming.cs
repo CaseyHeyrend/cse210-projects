@@ -16,7 +16,7 @@ public class Swimming :Exercise
     //Methods
     public override double CalculateDistance()//GetDistance
     {
-        double distance = _laps * 50 / 1000 * 0.62;
+        double distance = Math.Round(_laps * 50 / 1000 * 0.62);
         return distance;
     }
     public override double CalculateSpeed()//GetSpeed
@@ -26,7 +26,7 @@ public class Swimming :Exercise
     }
     public override double CalculatePace()//GetPace
     {
-        double pace = _minutes / CalculateDistance();
+        double pace = Math.Round(_minutes / CalculateDistance());
         return pace;
     }
 }

@@ -14,7 +14,7 @@ class Program
         Cycling stationaryBicycles = new Cycling("June 19, 2024", 60, 15);
         exeList.Add(stationaryBicycles);
         
-        Swimming swimlaps = new Swimming("June 21, 2024", 20, 15);
+        Swimming swimlaps = new Swimming("June 21, 2024", 20, 20);
         exeList.Add(swimlaps);
 
         Console.WriteLine("Exercises: ");
